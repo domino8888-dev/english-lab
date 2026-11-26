@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>English Lab — онлайн-тренер</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section id="loading" class="loading"><div class="brand"><b>E</b> English Lab.</div><div class="spinner"></div><p>Загрузка...</p></section>
+<section id="auth" class="auth" hidden>
+  <div class="auth-intro"><div class="brand"><b>E</b> English Lab.</div><p class="eyebrow">LEARN • PRACTISE • REPEAT</p><h1>English<br>starts here.</h1><p>Учите английский в своём темпе.</p><span class="auth-letters" aria-hidden="true">Aa</span></div>
+  <div class="auth-content"><form id="auth-form" class="auth-form"><p class="eyebrow">ВАШЕ ОБУЧЕНИЕ</p><h2 id="auth-title">Вход в аккаунт</h2><p id="auth-subtitle" class="muted">Продолжите изучение английского.</p><label id="name-label" hidden>Имя<input id="auth-name" autocomplete="name" maxlength="80"></label><label>Электронная почта<input id="auth-email" type="email" autocomplete="email" required></label><label>Пароль<input id="auth-password" type="password" autocomplete="current-password" minlength="6" required></label><button class="primary" id="auth-submit">Войти</button><button type="button" id="auth-switch" class="secondary">Нет аккаунта? Зарегистрироваться</button><p id="auth-message" role="status" class="notice"></p></form></div>
+</section>
+<div id="app" hidden>
+  <header class="topbar"><div class="shell nav"><button class="brand brand-button" data-page="home"><b>E</b> English Lab.</button><nav aria-label="Основное меню"><button data-page="home">Главная</button><button data-page="lessons">Уроки</button><button data-page="words">Словарь</button><button data-page="practice">Практика</button><button data-page="progress">Прогресс</button><button data-page="admin" id="admin-nav" hidden>Управление</button><button data-page="profile">Профиль</button></nav></div></header>
+  <main class="shell main"><p id="message" class="notice" role="status"></p><div id="view"></div></main>
+  <footer class="shell footer">English Lab. <span>Учебный веб-сервис</span></footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script><script src="model.js"></script><script src="ui.js"></script><script src="auth.js"></script><script src="admin.js"></script><script src="app.js"></script>
+</body></html>
